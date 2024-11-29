@@ -1,1 +1,127 @@
-/*Schrijf hier jouw css*/
+/*////////////////////////////////////////////////////////////////////////
+Table of Contents:
+    1. Global Styles
+    2. Typografie
+    3. Areas
+        3.1 Top text & header
+        3.2 Blocks
+
+////////////////////////////////////////////////////////////////////////*/
+
+/*Colors: dark blue #030027, beige #F2F3D9, brick #C16E70*/
+
+/*////////////////////////
+    1. Global Styles
+////////////////////////*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*////////////////////////
+    2. Typography
+////////////////////////*/
+
+body {
+    font-family: Roboto, sans-serif;
+    color: #030027;
+}
+
+nav {
+    color: #FFF;
+}
+
+nav h2 {
+    text-transform: uppercase;
+}
+
+/*////////////////////////
+    3. Areas
+////////////////////////*/
+body {
+    background-color: #F2F3D9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*///////////// 3.1 Top text & header /////////////*/
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 80px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: #030027;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: calc(100% - 80px);
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+    list-style: none;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: calc(100vh - 120px);
+    width: calc(100% - 80px);
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 150px;
+    width: 100%;
+    text-align: center;
+}
+
+/*///////////// 3.2 Blocks /////////////*/
+.blocks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}
+
+.blocks p {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    flex-basis: 280px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    height: 350px;
+    text-align: center;
+    padding: 20px;
+    background-color: #C16E70;
+    border-radius: 5px;
+}
