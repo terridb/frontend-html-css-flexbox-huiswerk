@@ -3,8 +3,8 @@ Table of Contents:
     1. Global Styles
     2. Typografie
     3. Areas
-        3.1 Top text & header
-        3.2 Blocks
+        3.1 Navigation
+        3.2 Main
 
 ////////////////////////////////////////////////////////////////////////*/
 
@@ -19,6 +19,13 @@ Table of Contents:
     box-sizing: border-box;
 }
 
+body {
+    background-color: #F2F3D9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 /*////////////////////////
     2. Typography
 ////////////////////////*/
@@ -30,23 +37,30 @@ body {
 
 nav {
     color: #FFF;
+    font-size: 14px;
 }
 
 nav h2 {
     text-transform: uppercase;
+    font-size: 16px;
+}
+
+.main-container h1 {
+    font-size: 22px;
+}
+
+.main-container h3 {
+    font-size: 16px;
+}
+
+.main-container p {
+    font-size: 14px;
 }
 
 /*////////////////////////
     3. Areas
 ////////////////////////*/
-body {
-    background-color: #F2F3D9;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/*///////////// 3.1 Top text & header /////////////*/
+/*///////////// 3.1 Navigation /////////////*/
 nav {
     display: flex;
     flex-direction: row;
@@ -71,11 +85,20 @@ nav ul{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    gap: 70px;
     list-style: none;
+    flex-basis: 400px;
     flex-grow: 0;
     flex-shrink: 0;
+}
+
+/*///////////// 3.2 Main /////////////*/
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .main-container {
@@ -84,27 +107,16 @@ nav ul{
     align-items: center;
     flex-basis: calc(100vh - 120px);
     width: calc(100% - 80px);
-    flex-grow: 1;
-    flex-shrink: 1;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .top-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-basis: 150px;
+    height: 150px;
     width: 100%;
     text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
-/*///////////// 3.2 Blocks /////////////*/
 .blocks {
     display: flex;
     flex-direction: row;
